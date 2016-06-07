@@ -22,3 +22,9 @@ html, body{
 	height: 40px;
 	background-color: rgba(0,0,0,0.8);
 }
+#Desktop10.minTaskbar>#Desktop{
+	bottom: 30px;
+}
+#Desktop10.minTaskbar>#Taskbar{
+	height: 30px;
+}
