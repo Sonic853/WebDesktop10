@@ -13,6 +13,13 @@ html, body{
 	top: 0;
 	bottom: 40px;
 	background-color: rgba(0,0,0,0.2);
+	overflow: hidden;
+	column-width: 74px;
+	-moz-column-width: 74px;
+	-webkit-column-width: 74px;
+}
+#Desktop10>#Desktop>ol{
+	
 }
 #Desktop10>#Taskbar{
 	position: absolute;
