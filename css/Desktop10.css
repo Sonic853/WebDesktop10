@@ -2,9 +2,14 @@
 	padding: 0;
 	margin: 0;
 }
-html, body{
+html, body, #Desktop10{
 	height: 100%;
 	width: 100%;
+	overflow: hidden;
+}
+/*设置桌面*/
+#Desktop10{
+	background: #FFF url("../img/lookstars.png") no-repeat fixed center center / cover;
 }
 #Desktop10>#Desktop{
 	position: absolute;
@@ -12,15 +17,12 @@ html, body{
 	right: 0;
 	top: 0;
 	bottom: 40px;
-	background-color: rgba(0,0,0,0.2);
 	overflow: hidden;
-	column-width: 74px;
-	-moz-column-width: 74px;
-	-webkit-column-width: 74px;
 }
 #Desktop10>#Desktop>ol{
 	
 }
+/*设置任务栏*/
 #Desktop10>#Taskbar{
 	position: absolute;
 	left: 0;
@@ -29,9 +31,57 @@ html, body{
 	height: 40px;
 	background-color: rgba(0,0,0,0.8);
 }
+#Desktop10>#Taskbar>#StartBar{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 48px;
+}
+#Desktop10>#Taskbar>#StartBar>#StartButtom{
+	width: 48px;
+	height: 40px;
+}
+#Desktop10>#Taskbar>#StartBar>#StartButtom:hover{
+	background-color: rgba(255,255,255,0.1);
+}
+#Desktop10>#Taskbar>#StartBar>#StartButtom:active{
+	background-color: rgba(255,255,255,0.05);
+}
+/*设置开始菜单*/
+#Desktop10>#StartMenu{
+	position: absolute;
+	left: 0;
+	bottom: 40px;
+	width: 740px;
+	height: 390px;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.9);
+}
+#Desktop10>#StartMenu>#LeftNav{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 48px;
+}
+/*设置小任务栏*/
 #Desktop10.minTaskbar>#Desktop{
 	bottom: 30px;
 }
 #Desktop10.minTaskbar>#Taskbar{
 	height: 30px;
 }
+#Desktop10.minTaskbar>#Taskbar>#StartBar>#StartButtom{
+	width: 36px;
+	height: 30px;
+}
+#Desktop10.minTaskbar>#Taskbar>#StartBar{
+	width: 36px;
+}
+#Desktop10.minTaskbar>#StartMenu{
+	bottom: 30px;
+}
+/*#Desktop10.minTaskbar>#StartMenu>#LeftNav{
+	width: 36px;
+}*/
