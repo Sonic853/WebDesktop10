@@ -1,0 +1,37 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html, body{
+	height: 100%;
+	width: 100%;
+}
+#Desktop10>#Desktop{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 40px;
+	background-color: rgba(0,0,0,0.2);
+	overflow: hidden;
+	column-width: 74px;
+	-moz-column-width: 74px;
+	-webkit-column-width: 74px;
+}
+#Desktop10>#Desktop>ol{
+	
+}
+#Desktop10>#Taskbar{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 40px;
+	background-color: rgba(0,0,0,0.8);
+}
+#Desktop10.minTaskbar>#Desktop{
+	bottom: 30px;
+}
+#Desktop10.minTaskbar>#Taskbar{
+	height: 30px;
+}
