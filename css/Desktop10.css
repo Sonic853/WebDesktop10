@@ -11,7 +11,7 @@ html, body, #Desktop10{
 #Desktop10{
 	background: #FFF url("../img/lookstars.png") no-repeat fixed center center / cover;
 }
-#Desktop10>#Desktop{
+#Desktop10>#D10-Desktop{
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -19,11 +19,11 @@ html, body, #Desktop10{
 	bottom: 40px;
 	overflow: hidden;
 }
-#Desktop10>#Desktop>ol{
+#Desktop10>#D10-Desktop>ol{
 	
 }
 /*设置任务栏*/
-#Desktop10>#Taskbar{
+#Desktop10>#D10-Taskbar{
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -31,25 +31,29 @@ html, body, #Desktop10{
 	height: 40px;
 	background-color: rgba(0,0,0,0.8);
 }
-#Desktop10>#Taskbar>#StartBar{
+#Desktop10>#D10-Taskbar>#D10-StartBar{
 	position: absolute;
 	left: 0;
 	top: 0;
 	bottom: 0;
 	width: 48px;
 }
-#Desktop10>#Taskbar>#StartBar>#StartButtom{
+#Desktop10>#D10-Taskbar>#D10-StartBar>#D10-StartButton{
 	width: 48px;
 	height: 40px;
 }
-#Desktop10>#Taskbar>#StartBar>#StartButtom:hover{
+#Desktop10>#D10-Taskbar>#D10-StartBar>#D10-StartButton:hover{
 	background-color: rgba(255,255,255,0.1);
 }
-#Desktop10>#Taskbar>#StartBar>#StartButtom:active{
+#Desktop10>#D10-Taskbar>#D10-StartBar>#D10-StartButton:active{
 	background-color: rgba(255,255,255,0.05);
 }
+#Desktop10>#D10-Taskbar>#D10-StartBar>#D10-StartButton.StartButtonClicked{
+	background-color: rgba(255,255,255,0.2);
+}
 /*设置开始菜单*/
-#Desktop10>#StartMenu{
+#Desktop10>#D10-StartMenu{
+	display: none;
 	position: absolute;
 	left: 0;
 	bottom: 40px;
@@ -58,28 +62,99 @@ html, body, #Desktop10{
 	overflow: hidden;
 	background-color: rgba(0,0,0,0.9);
 }
-#Desktop10>#StartMenu>#LeftNav{
+#Desktop10>#D10-StartMenu.openStartMenu{
+	display: block;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav{
 	position: absolute;
 	left: 0;
 	top: 0;
 	bottom: 0;
 	width: 48px;
+	overflow: hidden;
+	font-size: 14px;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav.openLeftNav{
+	width: 256px;
+	background-color: #000;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More{
+	width: 256px;
+	height: 48px;
+	line-height: 48px;
+	color: #FFF;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More:hover{
+	background-color: rgba(255,255,255,0.1);
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More:active{
+	transform:scale(0.98);
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More>.D10-Menu-ico{
+	display: inline-block;
+	width: 16px;
+	height: 9px;
+	line-height: 48px;
+	padding: 20px 16px 19px;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More>.D10-Menu-ico>span{
+	display: block;
+	width: 16px;
+	height: 9px;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More>.D10-Menu-ico>span>span{
+	display: block;
+	line-height: normal;
+	border-bottom: 1px solid #FFF;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More>.D10-Menu-ico>span>span+span{
+	margin-top: 3px;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav-Bg{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav-Bg.openLeftNav-Bg{
+	display: block;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftMenu{
+	position: absolute;
+	left: 48px;
+	top: 0;
+	bottom: 0;
+	width: 260px;
+}
+#Desktop10>#D10-StartMenu>#D10-RightMenu{
+	position: absolute;
+	left: 308px;
+	right: 0;
+	top: 0;
+	bottom: 0;
 }
 /*设置小任务栏*/
-#Desktop10.minTaskbar>#Desktop{
+#Desktop10.minTaskbar>#D10-Desktop{
 	bottom: 30px;
 }
-#Desktop10.minTaskbar>#Taskbar{
+#Desktop10.minTaskbar>#D10-Taskbar{
 	height: 30px;
 }
-#Desktop10.minTaskbar>#Taskbar>#StartBar>#StartButtom{
+#Desktop10.minTaskbar>#D10-Taskbar>#D10-StartBar>#D10-StartButton{
 	width: 36px;
 	height: 30px;
 }
-#Desktop10.minTaskbar>#Taskbar>#StartBar{
+#Desktop10.minTaskbar>#D10-Taskbar>#D10-StartBar{
 	width: 36px;
 }
-#Desktop10.minTaskbar>#StartMenu{
+#Desktop10.minTaskbar>#D10-StartMenu{
 	bottom: 30px;
 }
 /*#Desktop10.minTaskbar>#StartMenu>#LeftNav{
