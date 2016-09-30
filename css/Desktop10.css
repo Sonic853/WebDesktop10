@@ -48,7 +48,7 @@ html, body, #Desktop10{
 #Desktop10>#D10-Taskbar>#D10-StartBar>#D10-StartButton:active{
 	background-color: rgba(255,255,255,0.05);
 }
-#Desktop10>#D10-Taskbar>#D10-StartBar>#D10-StartButton.StartButtonClicked{
+#Desktop10>#D10-Taskbar>#D10-StartBar>#D10-StartButton.D10-StartButtonClicked{
 	background-color: rgba(255,255,255,0.2);
 }
 /*设置开始菜单*/
@@ -62,7 +62,7 @@ html, body, #Desktop10{
 	overflow: hidden;
 	background-color: rgba(0,0,0,0.9);
 }
-#Desktop10>#D10-StartMenu.openStartMenu{
+#Desktop10>#D10-StartMenu.D10-openStartMenu{
 	display: block;
 }
 #Desktop10>#D10-StartMenu>#D10-LeftNav{
@@ -74,7 +74,7 @@ html, body, #Desktop10{
 	overflow: hidden;
 	font-size: 14px;
 }
-#Desktop10>#D10-StartMenu>#D10-LeftNav.openLeftNav{
+#Desktop10>#D10-StartMenu>#D10-LeftNav.D10-openLeftNav{
 	width: 256px;
 	background-color: #000;
 }
@@ -123,7 +123,7 @@ html, body, #Desktop10{
 	right: 0;
 	display: none;
 }
-#Desktop10>#D10-StartMenu>#D10-LeftNav-Bg.openLeftNav-Bg{
+#Desktop10>#D10-StartMenu>#D10-LeftNav-Bg.D10-openLeftNav-Bg{
 	display: block;
 }
 #Desktop10>#D10-StartMenu>#D10-LeftMenu{
@@ -141,22 +141,22 @@ html, body, #Desktop10{
 	bottom: 0;
 }
 /*设置小任务栏*/
-#Desktop10.minTaskbar>#D10-Desktop{
+#Desktop10.D10-minTaskbar>#D10-Desktop{
 	bottom: 30px;
 }
-#Desktop10.minTaskbar>#D10-Taskbar{
+#Desktop10.D10-minTaskbar>#D10-Taskbar{
 	height: 30px;
 }
-#Desktop10.minTaskbar>#D10-Taskbar>#D10-StartBar>#D10-StartButton{
+#Desktop10.D10-minTaskbar>#D10-Taskbar>#D10-StartBar>#D10-StartButton{
 	width: 36px;
 	height: 30px;
 }
-#Desktop10.minTaskbar>#D10-Taskbar>#D10-StartBar{
+#Desktop10.D10-minTaskbar>#D10-Taskbar>#D10-StartBar{
 	width: 36px;
 }
-#Desktop10.minTaskbar>#D10-StartMenu{
+#Desktop10.D10-minTaskbar>#D10-StartMenu{
 	bottom: 30px;
 }
-/*#Desktop10.minTaskbar>#StartMenu>#LeftNav{
+/*#Desktop10.D10-minTaskbar>#StartMenu>#LeftNav{
 	width: 36px;
 }*/
