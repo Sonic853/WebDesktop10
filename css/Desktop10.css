@@ -116,6 +116,12 @@ html, body, #Desktop10{
 #Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More>.D10-Menu-ico>span>span+span{
 	margin-top: 3px;
 }
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-bottom{
+	position: absolute;
+	width: 256px;
+	bottom: 0;
+	left: 0;
+}
 #Desktop10>#D10-StartMenu>#D10-LeftNav-Bg{
 	position: absolute;
 	top: 0;
