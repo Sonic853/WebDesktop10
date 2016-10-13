@@ -9,7 +9,8 @@ html, body, #Desktop10{
 }
 /*设置桌面*/
 #Desktop10{
-	background: #FFF url("../img/lookstars.png") no-repeat fixed center center / cover;
+	/*background: #FFF url("../img/lookstars.png") no-repeat fixed center center / cover;*/
+	background: #FFF url("http://ww3.sinaimg.cn/large/7b777075gw1f8qnxgil5hj21kw11xnpd.jpg") no-repeat fixed center center / cover;
 }
 #Desktop10>#D10-Desktop{
 	position: absolute;
