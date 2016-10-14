@@ -74,6 +74,7 @@ html, body, #Desktop10{
 	width: 48px;
 	overflow: hidden;
 	font-size: 14px;
+	color: #FFF;
 }
 #Desktop10>#D10-StartMenu>#D10-LeftNav.D10-openLeftNav{
 	width: 256px;
@@ -83,7 +84,6 @@ html, body, #Desktop10{
 	width: 256px;
 	height: 48px;
 	line-height: 48px;
-	color: #FFF;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -94,6 +94,7 @@ html, body, #Desktop10{
 	background-color: rgba(255,255,255,0.1);
 }
 #Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More:active{
+	background-color: rgba(255,255,255,0.17);
 	transform:scale(0.98);
 }
 #Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More>.D10-Menu-ico{
@@ -121,6 +122,42 @@ html, body, #Desktop10{
 	width: 256px;
 	bottom: 0;
 	left: 0;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-bottom>div{
+	height: 48px;
+	line-height: 48px;
+	display: flex;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-bottom>div:hover{
+	background-color: rgba(255,255,255,0.1);
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-bottom>div:active{
+	background-color: rgba(255,255,255,0.17);
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-bottom>div>.D10-LeftNav-Userico{
+	display: inline-block;
+	padding: 14px;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-bottom>div>.D10-LeftNav-Userico>img{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	vertical-align: top;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-bottom>div>.D10-LeftNav-Explorerico{
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-bottom>div>.D10-LeftNav-Settingsico{
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+}
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-bottom>div>.D10-LeftNav-Powerico{
+	display: inline-block;
+	width: 48px;
+	height: 48px;
 }
 #Desktop10>#D10-StartMenu>#D10-LeftNav-Bg{
 	position: absolute;
