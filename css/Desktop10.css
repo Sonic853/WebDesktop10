@@ -34,6 +34,7 @@ html, body, #Desktop10{
 	bottom: 0;
 	height: 40px;
 	background-color: rgba(0,0,0,0.8);
+	z-index: 9999;
 }
 #Desktop10>#D10-Taskbar>#D10-StartBar{
 	position: absolute;
@@ -66,6 +67,7 @@ html, body, #Desktop10{
 	overflow: hidden;
 	background-color: rgba(0,0,0,0.9);
 	color: #FFF;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.79);
 }
 #Desktop10>#D10-StartMenu.D10-openStartMenu{
 	display: block;
