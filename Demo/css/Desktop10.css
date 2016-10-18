@@ -46,6 +46,7 @@ html, body, #Desktop10{
 #Desktop10>#D10-Taskbar>#D10-StartBar>#D10-StartButton{
 	width: 48px;
 	height: 40px;
+	background: transparent url("../img/LStartMenu.png") no-repeat scroll center center;
 }
 #Desktop10>#D10-Taskbar>#D10-StartBar>#D10-StartButton:hover{
 	background-color: rgba(255,255,255,0.1);
@@ -154,16 +155,19 @@ html, body, #Desktop10{
 	display: inline-block;
 	width: 48px;
 	height: 48px;
+	background: transparent url("../img/FileExplorerWhite.png") no-repeat scroll center center;
 }
 #Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-bottom>div>.D10-LeftNav-Settingsico{
 	display: inline-block;
 	width: 48px;
 	height: 48px;
+	background: transparent url("../img/SettingsWhite.png") no-repeat scroll center center;
 }
 #Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-bottom>div>.D10-LeftNav-Powerico{
 	display: inline-block;
 	width: 48px;
 	height: 48px;
+	background: transparent url("../img/PowerWhite.png") no-repeat scroll center center;
 }
 #Desktop10>#D10-StartMenu>#D10-LeftNav-Bg{
 	position: absolute;
@@ -201,7 +205,7 @@ html, body, #Desktop10{
 	height: 32px;
 	margin: 2px;
 	overflow: hidden;
-	background-color: rgb(93,160,115);
+	background-color: rgb(41,204,93);
 	display: inline-block;
 }
 #Desktop10>#D10-StartMenu>#D10-LeftMenu>[id^=D10-LeftMenu-]>[id^=D10-LeftMenu-List-App-]>.D10-LeftMenu-List-App-ico>img{
