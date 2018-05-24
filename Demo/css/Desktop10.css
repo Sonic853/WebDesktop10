@@ -6,11 +6,14 @@ html, body, #Desktop10{
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 /*设置桌面*/
 #Desktop10{
 	/*background: #FFF url("../img/lookstars.png") no-repeat fixed center center / cover;*/
-	background: #FFF url("http://ww3.sinaimg.cn/large/7b777075gw1f8qnxgil5hj21kw11xnpd.jpg") no-repeat fixed center center / cover;
+	background: #FFF url("//ww3.sinaimg.cn/large/7b777075gw1f8qnxgil5hj21kw11xnpd.jpg") no-repeat fixed center center / cover;
 }
 #Desktop10>#D10-Desktop{
 	position: absolute;
@@ -26,6 +29,41 @@ html, body, #Desktop10{
 	
 }
 /*设置桌面-ed*/
+/*设置窗口区域*/
+#Desktop10>.D10-Window{
+	position: absolute;
+	left: 10px;
+	top: 50px;
+	width: 500px;
+	height: 300px;
+	background-color: #FFF;
+	border: 1px solid #000;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+	z-index: 8700;
+}
+#Desktop10>.D10-Window>.D10-Window-Title{
+	background-color: #000;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+#Desktop10>.D10-Window .D10-Title-Close{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 45px;
+	height: 29px;
+}
+#Desktop10>.D10-Window .D10-Title-Close:hover{
+	background-color: rgba(232,17,35,1);
+}
+#Desktop10>.D10-Window .D10-Title-Close:active{
+	background-color: rgba(139,10,20,1);
+}
+
+/*设置窗口区域-ed*/
 /*设置任务栏*/
 #Desktop10>#D10-Taskbar{
 	position: absolute;
@@ -65,10 +103,11 @@ html, body, #Desktop10{
 	bottom: 40px;
 	width: 740px;
 	height: 390px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	background-color: rgba(0,0,0,0.9);
 	color: #FFF;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.79);
+	z-index: 9998;
 }
 #Desktop10>#D10-StartMenu.D10-openStartMenu{
 	display: block;
@@ -87,6 +126,9 @@ html, body, #Desktop10{
 	width: 256px;
 	background-color: #000;
 }
+#Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More{
+	margin-top: 4px;
+}
 #Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More>#D10-LeftNav-More-Btn{
 	width: 256px;
 	height: 48px;
@@ -102,7 +144,7 @@ html, body, #Desktop10{
 }
 #Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More>#D10-LeftNav-More-Btn:active{
 	background-color: rgba(255,255,255,0.17);
-	transform:scale(0.99);
+	/*transform:scale(0.99);*/
 }
 #Desktop10>#D10-StartMenu>#D10-LeftNav>#D10-LeftNav-More>#D10-LeftNav-More-Btn>.D10-Menu-ico{
 	display: inline-block;
@@ -188,6 +230,7 @@ html, body, #Desktop10{
 	top: 0;
 	bottom: 0;
 	width: 260px;
+	padding-top: 4px;
 	overflow-y: auto;
 }
 #Desktop10>#D10-StartMenu>#D10-LeftMenu>[id^=D10-LeftMenu-]>[id^=D10-LeftMenu-List-]{
@@ -234,6 +277,16 @@ html, body, #Desktop10{
 	bottom: 0;
 }
 	/*设置开始菜单-右磁贴-ed*/
+	/*设置开始菜单-高度调整线*/
+#Desktop10>#D10-StartMenu>#D10-MenuTop-AdjustHeight{
+	position: absolute;
+	top: -4px;
+	left: 0;
+	right: 0;
+	height: 8px;
+	cursor: n-resize;
+}
+	/*设置开始菜单-高度调整线-ed*/
 /*设置开始菜单-ed*/
 /*设置小任务栏*/
 #Desktop10.D10-minTaskbar>#D10-Desktop{

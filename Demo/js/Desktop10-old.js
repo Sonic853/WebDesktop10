@@ -63,7 +63,7 @@ function D10Ife(F,e){
 			console.log("Error.");
 	}
 }
-function D10Drag(Get,Target,e){
+function D10Drag(Get,Target){
 	var params = {
 		height: 0,
 		width: 0,
@@ -73,54 +73,53 @@ function D10Drag(Get,Target,e){
 		cursorY: 0,
 		flag: false
 	};
-	if(Get.indexOf("D10-WindowBoxs-") == 0){
-		if(D10Id(Get).style.zIndex != 8853){
-			for (var i=0;i < document.querySelectorAll("[id^=D10-WindowBoxs-]").length;i++) {
-				D10Id("D10-WindowBoxs-"+i).style.zIndex = --(D10Id("D10-WindowBoxs-"+i).style.zIndex);
-			}
-			D10Id(Get).style.zIndex = 8853;
-		}
-	}else if(e.button == 0 && Get == "D10-Window-Title" && Target.indexOf("D10-WindowBoxs-") == 0){
-		params.flag = true;
-		params.currentX = e.clientX;
-		params.currentY = e.clientY;
-		params.left = D10Id(Target).offsetLeft;
-		params.top = D10Id(Target).offsetTop;
-		if(!e) {
-			e = window.event;
-			//防止文字选中
-			D10Id(Get).onselectstart = function() {
-				return false;
+	if(Get == "D10-MenuTop-AdjustHeight" && Target == "D10-Desktop"){
+		D10Id(Get).onmousedown = function(e){
+			if((D10Id(Target).offsetHeight - 390) < 100){
+				D10Id("D10-StartMenu").style.height = "390px";
+			}else{
+				params.flag = true;
+				params.currentY = e.clientY;
+				params.height = D10Id("D10-StartMenu").offsetHeight;
+				if(!e) {
+					e = window.e;
+					//防止文字选中
+					D10Id(Get).onselectstart = function() {
+						return false;
+					}
+				}
 			}
 		}
-		document.onmouseup = function(e) {
-			if(D10Id(Target).offsetTop < 0) {
-				D10Id(Target).style.top = "0px";
-			}
+		document.onmouseup = function(e){
 			params.flag = false;
 		}
-		document.onmousemove = function(e) {
-			var e = e ? e : window.event;
-			if(params.flag) {
-				var nowX = e.clientX,
-					disX = nowX - params.currentX;
-				var nowY = e.clientY,
-					disY = nowY - params.currentY;
-				D10Id(Target).style.left = (params.left + disX) + "px";
-				D10Id(Target).style.top = (params.top + disY) + "px";
-				if(event.preventDefault) {
-					event.preventDefault();
+		document.onmousemove = function(e){
+			var e = e ? e: window.e;
+			if(params.flag){
+				if((D10Id(Target).offsetHeight - 390) < 100){
+					D10Id("D10-StartMenu").style.height = "390px";
+				}else{
+					var nowY = e.clientY,disY = nowY - params.currentY;
+					D10Id("D10-StartMenu").style.height = (params.height - disY) + "px";
+					if(D10Id("D10-StartMenu").offsetHeight < 390){
+						D10Id("D10-StartMenu").style.height = "390px";
+					}else if((D10Id(Target).offsetHeight - D10Id("D10-StartMenu").offsetHeight) < 100){
+						D10Id("D10-StartMenu").style.height = (D10Id(Target).offsetHeight - 100) + "px";
+					}
+				}
+				if(event.preventDefault){
+				event.preventDefault();
 				}
 				return false;
 			}
 		}
-	}else if(e.button == 0 && Get == "D10-MenuTop-AdjustHeight" && Target == "D10-Desktop"){
-		if((D10Id(Target).offsetHeight - 390) < 100) {
-			D10Id("D10-StartMenu").style.height = "390px";
-		} else {
+	}else if(Get == "D10-Window-Title" && Target.indexOf("D10-WindowBoxs-") == 0){
+		D10Id(Target).getElementsByClassName(Get)[0].onmousedown = function(e){
 			params.flag = true;
+			params.currentX = e.clientX;
 			params.currentY = e.clientY;
-			params.height = D10Id("D10-StartMenu").offsetHeight;
+			params.left = D10Id(Target).offsetLeft;
+			params.top = D10Id(Target).offsetTop;
 			if(!e) {
 				e = window.e;
 				//防止文字选中
@@ -129,26 +128,21 @@ function D10Drag(Get,Target,e){
 				}
 			}
 		}
-		document.onmouseup = function(e) {
+		document.onmouseup = function(e){
+			if(D10Id(Target).offsetTop < 0){
+				D10Id(Target).style.top = "0px";
+			}
 			params.flag = false;
 		}
-		document.onmousemove = function(e) {
-			var e = e ? e : window.e;
-			if(params.flag) {
-				if((D10Id(Target).offsetHeight - 390) < 100) {
-					D10Id("D10-StartMenu").style.height = "390px";
-				} else {
-					var nowY = e.clientY,
-						disY = nowY - params.currentY;
-					D10Id("D10-StartMenu").style.height = (params.height - disY) + "px";
-					if(D10Id("D10-StartMenu").offsetHeight < 390) {
-						D10Id("D10-StartMenu").style.height = "390px";
-					} else if((D10Id(Target).offsetHeight - D10Id("D10-StartMenu").offsetHeight) < 100) {
-						D10Id("D10-StartMenu").style.height = (D10Id(Target).offsetHeight - 100) + "px";
-					}
-				}
-				if(event.preventDefault) {
-					event.preventDefault();
+		document.onmousemove = function(e){
+			var e = e ? e: window.e;
+			if(params.flag){
+				var nowX = e.clientX,disX = nowX - params.currentX;
+				var nowY = e.clientY,disY = nowY - params.currentY;
+				D10Id(Target).style.left = (params.left+ disX) + "px";
+				D10Id(Target).style.top = (params.top + disY) + "px";
+				if(event.preventDefault){
+				event.preventDefault();
 				}
 				return false;
 			}
@@ -186,18 +180,9 @@ window.onload = function(){
 //		
 //	}
 //	alert(document.querySelectorAll("[id^=D10-WindowBoxs-]").length);
-	D10Id("D10-MenuTop-AdjustHeight").onmousedown = function(e){D10Drag("D10-MenuTop-AdjustHeight","D10-Desktop",e)};
-//	for(var i = 0;i < document.querySelectorAll("[id^=D10-WindowBoxs-]").length;i++){
-//		D10Id("D10-WindowBoxs-"+i).getElementsByClassName("D10-Window-Title")[0].onmousedown = function(e){D10Drag("D10-Window-Title","D10-WindowBoxs-"+i,e)};
-//	}
-	D10Id("D10-WindowBoxs-0").getElementsByClassName("D10-Window-Title")[0].onmousedown = function(e){D10Drag("D10-Window-Title","D10-WindowBoxs-0",e)};
-	D10Id("D10-WindowBoxs-1").getElementsByClassName("D10-Window-Title")[0].onmousedown = function(e){D10Drag("D10-Window-Title","D10-WindowBoxs-1",e)};
-	D10Id("D10-WindowBoxs-2").getElementsByClassName("D10-Window-Title")[0].onmousedown = function(e){D10Drag("D10-Window-Title","D10-WindowBoxs-2",e)};
-	D10Id("D10-WindowBoxs-3").getElementsByClassName("D10-Window-Title")[0].onmousedown = function(e){D10Drag("D10-Window-Title","D10-WindowBoxs-3",e)};
-	D10Id("D10-WindowBoxs-0").onmousedown = function(e){D10Drag("D10-WindowBoxs-0")};
-	D10Id("D10-WindowBoxs-1").onmousedown = function(e){D10Drag("D10-WindowBoxs-1")};
-	D10Id("D10-WindowBoxs-2").onmousedown = function(e){D10Drag("D10-WindowBoxs-2")};
-	D10Id("D10-WindowBoxs-3").onmousedown = function(e){D10Drag("D10-WindowBoxs-3")};
+	D10Drag("D10-MenuTop-AdjustHeight","D10-Desktop");
+	D10Drag("D10-Window-Title","D10-WindowBoxs-1");
+	D10Drag("D10-Window-Title","D10-WindowBoxs-2");
 }
 //	document.getElementById("D10-Desktop").offsetHeight;
 //	document.getElementById("D10-StartMenu").offsetHeight;
